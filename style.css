@@ -110,12 +110,13 @@ nav {
 
 section {
   width: 100%;
-
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .main-container {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -124,7 +125,7 @@ section {
 .main-container .content {
   color: white;
   width: 40%;
-  /* min-height: 100px; */
+  min-height: 100px;
   box-shadow: 0 0 120px 50px #212428;
 }
 
@@ -202,8 +203,69 @@ section {
   width: 110%;
 }
 
-/* ----------- Home page First Section style end---------- */
+/* ----------- Home About Section style end---------- */
 
+/* ---------------- skill Section style start-------- */
+#skill{
+ margin-top: 10rem;
+ margin-bottom: 10rem;
+}
+.skill-title{
+  text-align: center;
+  color: #1DABB8;
+  font-size: 2rem;
+}
+.skill-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.skill-card-container{
+  width: 60%;
+  padding-left: 40px;
+}
+.skill-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+.skill-card{
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.skill-card:hover{
+  background-color: #404249;
+  transition: 1s;
+  cursor: pointer;
+}
+.skill-card h2{
+  color: #1DABB8;
+  margin: 10px 10px;
+}
+.skill-icon{
+  font-size: 4rem;
+  color: #1DABB8;
+}
+
+.skill-hireme{
+  width: 35%;
+  color: white;
+
+ 
+}
+.skill-hireme h2{
+  margin-bottom: 20px;
+}
+
+/* ---------------- skill Section style end--------- */
 
 
 /* -------------------- Footer style ----------------- */
@@ -300,6 +362,27 @@ section {
 
     margin-top: 8px;
   }
+  /* -------------- skill section-------- */
+  #skill{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+   }
+
+   .skill-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+   }
+ .skill-hireme{
+  width: 80%;
+  margin-bottom: 1rem;
+ }
+ .skill-card-container{
+   width: 100%;
+ }
+
+
+
 }
 
 @media(max-width:440px) {
@@ -323,5 +406,21 @@ section {
     margin-top: 8px;
 
   }
+  #skill{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+   }
+   .skill-card-container{
+    width: 100%;
+  }
+
+  .skill-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+
 
 }
