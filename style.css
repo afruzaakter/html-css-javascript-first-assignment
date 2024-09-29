@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -156,6 +156,10 @@ section {
   margin: 20px 0;
 }
 
+.social-links {
+  color: white;
+}
+
 .social-links i {
   color: #1DABB8;
   margin: 0 15px;
@@ -206,16 +210,18 @@ section {
 /* ----------- Home About Section style end---------- */
 
 /* ---------------- skill Section style start-------- */
-#skill{
- margin-top: 10rem;
- margin-bottom: 10rem;
+#skill {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
-.skill-title{
+
+.skill-title {
   text-align: center;
   color: #1DABB8;
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
-.skill-container{
+
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -223,62 +229,150 @@ section {
   align-items: center;
   margin-top: 30px;
 }
-.skill-card-container{
+
+.skill-card-container {
   width: 60%;
   padding-left: 40px;
 }
-.skill-box{
+
+.skill-box {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 5px;
 }
-.skill-card{
+
+.skill-card {
   border: 2px solid white;
   border-radius: 4px;
   color: white;
   text-align: center;
   padding: 20px;
 }
-.skill-card:hover{
+
+.skill-card:hover {
   background-color: #404249;
   transition: 1s;
   cursor: pointer;
 }
-.skill-card h2{
+
+.skill-card h2 {
   color: #1DABB8;
   margin: 10px 10px;
 }
-.skill-icon{
+
+.skill-icon {
   font-size: 4rem;
   color: #1DABB8;
 }
 
-.skill-hireme{
+.skill-hireme {
   width: 35%;
   color: white;
 
- 
+
 }
-.skill-hireme h2{
+
+.skill-hireme h2 {
   margin-bottom: 20px;
 }
 
 /* ---------------- skill Section style end--------- */
 
+/* --------------  Contact Section start ------------- */
+.contact-container {
+  margin-top: 3rem;
+  display: flex;
+  /* justify-content: center; */
+justify-content: space-around;
+  align-items: center;
+
+}
+
+.contact-title {
+  text-align: center;
+  color: #1DABB8;
+  font-size: 2.6rem;
+}
+
+.contact-content {
+  width: 40%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+
+}
+
+.contact-me {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.contact-des {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 10px;
+  padding: 5px;
+
+}
+
+.address i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.contact-form {
+  width: 40%;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form form input,
+textarea {
+  padding: 14px;
+  background-color: rgb(222, 213, 213);
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.contact-form form button {
+  padding: 8px;
+  font-size: 18px;
+  background-color: #1DABB8;
+  border-radius: 3px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --------------  Contact Section end ------------- */
 
 /* -------------------- Footer style ----------------- */
 
 .footer {
-  background-color: #1DABB8;
+  border-top: 1px solid #a8a9a9;
   padding: 30px 30px 30px 30px;
   padding-top: 20px;
   color: white;
   margin-top: 50px;
   padding-top: 50px;
   width: 100%;
- 
+
 }
 
 .footer_container {
@@ -306,7 +400,7 @@ section {
 }
 
 .footer_col p:hover {
-  color: rgb(0, 0, 0);
+  color: #1DABB8;
 }
 
 .footer_col p span {
@@ -324,11 +418,11 @@ section {
   padding-top: 30px;
   text-align: center;
   font-size: 0.8rem;
-  color: rgb(33, 32, 32);
+  color: rgb(246, 244, 244);
 }
 
 
- 
+
 /* Media Queries for Responsive Design */
 @media (max-width:884px) {
   .main-container {
@@ -340,7 +434,19 @@ section {
     display: none;
   }
 
-
+  .contact-content {
+    width: 100%;
+    padding: 15px;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contact-form{
+    width: 100%;
+    padding: 15px;
+  }
 
   .hamburg,
   .cancel {
@@ -362,31 +468,45 @@ section {
 
     margin-top: 8px;
   }
+
   /* -------------- skill section-------- */
-  #skill{
+  #skill {
     margin-top: 2rem;
     margin-bottom: 2rem;
-   }
+  }
 
-   .skill-container{
+  .container {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-   }
- .skill-hireme{
-  width: 80%;
-  margin-bottom: 1rem;
- }
- .skill-card-container{
-   width: 100%;
- }
+  }
 
+  .skill-hireme {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .skill-card-container {
+    width: 100%;
+  }
+ .footer{
+  padding: 0px 12px 12px 12px;
+ }
+  .footer_container{
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   margin-top: 20px;
+
+  }
 
 
 }
 
 @media(max-width:440px) {
-  
+
   .logo {
     font-size: 25px;
     margin-top: 5px;
@@ -406,15 +526,17 @@ section {
     margin-top: 8px;
 
   }
-  #skill{
+
+  #skill {
     margin-top: 2rem;
     margin-bottom: 2rem;
-   }
-   .skill-card-container{
+  }
+
+  .skill-card-container {
     width: 100%;
   }
 
-  .skill-box{
+  .skill-box {
     display: flex;
     flex-direction: column;
     align-items: center;
