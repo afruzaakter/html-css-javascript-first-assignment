@@ -1,3 +1,4 @@
+// ----------- Hamburg menu Mobile Menu ----
 function hamburg(){
     const navbar = document.querySelector(".dropdown")
     navbar.style.transform = "translateY(0px)" 
@@ -6,6 +7,8 @@ function cancel(){
     const navbar = document.querySelector(".cancel");
     navbar.style.transform = "translateY(-500px)" ;
 };
+
+// ------- Animation Text-----------
 
 const texts = [
     "PROGRAMMER",
@@ -46,3 +49,29 @@ function eraseText(){
 }
 
 window.onload = typeWriter
+
+// ---------- Filter Gallery-----------
+
+
+let filterItem = document.querySelector('.items-links');
+let filterImage = document.querySelectorAll(".project-img");
+
+window.addEventListener('load', () => {
+    filterItem.addEventListener('click', (selectedItem) => {
+        if (selectedItem.target.classList.contains("item-link")) {
+            document.querySelector('.menu-active').classList.remove('menu-active');
+            selectedItem.target.classList.add('menu-active');
+            
+            let filterName = selectedItem.target.getAttribute('data-name');
+            
+            filterImage.forEach((image) => {
+                let imageName = image.getAttribute('data-name'); // renamed this variable for clarity
+                if (imageName === filterName || filterName === 'all') {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = "none";
+                }
+            });
+        }
+    });
+});
